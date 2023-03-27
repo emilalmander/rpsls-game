@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@100&display=swap");
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">RPSLS-GAME</a>
+        </div>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="nav-links">
+          <li><a href="#">scoreboard</a></li>
+          <li><a href="#">rules</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="rules-popup">
+      <div class="big-screen-rules-box"></div>
+      <div class="rules-content">
+        <h1>rules</h1>
+        <div class="small-screen-rules-box">
+          <h2>who beats who?</h2>
+          <h3>Rock > Scissors, Lizard</h3>
+          <h3>Scissors > Paper, Lizard</h3>
+          <h3>Paper > Rock, Spock</h3>
+          <h3>Lizard > Spock, Paper</h3>
+          <h3>Spock > Scissors, Rock</h3>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

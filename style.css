@@ -1,0 +1,162 @@
+body {
+  background: lightblue;
+  font-family: "varela round", sans-serif;
+}
+/* NAV BAR */
+h1,
+h2 {
+  font-family: "varela round", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #252525;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fff;
+}
+
+.logo a {
+  font-size: 44px;
+  font-family: "varela round", sans-serif;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+@media screen and (max-width: 370px) {
+  .logo a {
+    font-size: 30px;
+    font-family: "varela round", sans-serif;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links a:hover {
+  color: rgba(241, 109, 107, 0.7);
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  padding-right: 50px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+@media screen and (max-width: 840px) {
+  .nav-links {
+    position: absolute;
+    z-index: 2;
+    right: 0px;
+    top: 70px;
+    height: 100px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 28px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    transform: translateX(0%);
+    background-color: #333;
+  }
+
+  #menu-toggle:checked ~ .nav-links li {
+    opacity: 1;
+  }
+
+  #menu-toggle:checked ~ .nav-links a {
+    color: #fff;
+  }
+  #menu-toggle ~ .nav-links {
+    transform: translateY(0%);
+    background-color: transparent;
+  }
+
+  #menu-toggle ~ .nav-links li {
+    opacity: 0;
+  }
+}
+/* RULES POPUP*/
+.rules-popup {
+  background-color: white;
+  width: 450px;
+  height: 900px;
+  padding: 30px 40px;
+  margin: auto;
+  width: 80%;
+  padding-top: 0px;
+  border: 3px solid green;
+}
+
+@media only screen and (min-width: 840px) {
+  .big-screen-rules-box {
+    background: url(game.PNG) no-repeat center center;
+    height: 100%;
+    width: 100%;
+  }
+  .rules-content {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 839px) {
+  .rules-content {
+    text-align: center;
+  }
+
+  .rules-content h1 {
+    text-align: center;
+    vertical-align: top;
+  }
+
+  .small-screen-rules-box {
+    height: 800px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+  }
+  .small-screen-rules-box h2 {
+    font-family: "varela round", sans-serif;
+  }
+  .small-screen-rules-box h3 {
+    font-family: "varela round", sans-serif;
+    padding-top: 20px;
+  }
+}
