@@ -209,18 +209,20 @@ nav {
  border: 1px solid black;
 }
 
-.box {
+.choice {
   width: 170px;
   height: 50px;
   background-color: gray;
   margin-right: 20px;
   display: inline-block;
   margin-top: 50px;
+  transition: all 0.4s ease;
   
   
 }
-.box:hover {
-  color: red;
+.choice:hover {
+  background-color: rgb(87, 85, 85);
+  cursor: pointer;
 }
 
 .you-picked, .opponent-picked {
@@ -232,7 +234,7 @@ nav {
   margin-top: 50px;
 }
 
-.x-won {
+.x-won p {
   width: 270px;
   height: 50px;
   background-color: gray;
@@ -241,11 +243,34 @@ nav {
 }
 .score {
   width: 770px;
-  height: 250px;
+  height: 150px;
   background-color: gray;
   display: inline-block;
   margin-top: 370px;
-  
+  padding: 45px 20px;
+  color: white;
+  position: relative;
+}
+
+.badge {
+    background-color: lightblue;
+    color: black;
+    font-size: 30px;
+    border: 3px solid gray;
+}
+
+#user-label {
+  position: absolute;
+  top: 55px;
+  left: -25px;
+}
+#opponent-label {
+  position: absolute;
+  top: 55px;
+  right: -55px;
+}
+#user-score, #opponent-score{
+  font-size: 50px;
 }
 
 

@@ -44,22 +44,28 @@
     </div>
     <div id="overlay"></div>
     <div class="main-game">
-      <div>
-        <div class="box">rock</div>
-        <div class="box">paper</div>
-        <div class="box">scissors</div>
-        <div class="box">lizzard</div>
-        <div class="box">smock</div>
+      <div class="choices">
+        <div id="r"class="choice">rock</div>
+        <div id="p"class="choice">paper</div>
+        <div id="s"class="choice">scissors</div>
+        <div id="l"class="choice">lizzard</div>
+        <div id="sm"class="choice">smock</div>
       </div>
       <div>
         <div class="you-picked">you picked...</div>
         <div class="opponent-picked">opponent picked...</div>
       </div>
       <div>
-        <div class="x-won">X WON!</div>
+        <div class="x-won">
+          <p>x-won</p>
+        </div>
       </div>
       <div>
-        <div class="score">SCORE</div>
+        <div class="score">
+          <div id="user-label" class="badge">user</div>
+          <div id="opponent-label" class="badge">opponent</div>
+        <span id="user-score">0</span>:<span id="opponent-score">0</span>
+      </div>
       </div>
     </div>
     <div class="leaderboard">
