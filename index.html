@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@100&display=swap");
     </style>
@@ -21,24 +21,28 @@
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <ul class="nav-links">
           <li><a href="#">leaderboard</a></li>
-          <li><a href="#">rules</a></li>
+          <li ><a data-modal-target="#modal" href="#">rules</a></li>
         </ul>
       </nav>
     </header>
-    <div class="rules-popup">
-      <div class="big-screen-rules-box"></div>
-      <div class="rules-content">
-        <h1>rules</h1>
-        <div class="small-screen-rules-box">
-          <h2>who beats who?</h2>
-          <h3>Rock > Scissors, Lizard</h3>
-          <h3>Scissors > Paper, Lizard</h3>
-          <h3>Paper > Rock, Spock</h3>
-          <h3>Lizard > Spock, Paper</h3>
-          <h3>Spock > Scissors, Rock</h3>
-        </div>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">RULES</div>
+        <button data-close-button class="close-button">&times;</button>
       </div>
+      <div class="big-screen-rules-box"></div>
+      <div class="small-screen-rules-box">
+        
+            <h2>who beats who?</h2>
+            <h3>Rock > Scissors, Lizard</h3>
+            <h3>Scissors > Paper, Lizard</h3>
+            <h3>Paper > Rock, Spock</h3>
+            <h3>Lizard > Spock, Paper</h3>
+            <h3>Spock > Scissors, Rock</h3>
+          </div>
+      
     </div>
+    <div id="overlay"></div>
     <div class="main-game">
       <div>
         <div class="box">rock</div>

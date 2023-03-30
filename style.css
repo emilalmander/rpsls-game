@@ -1,3 +1,6 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
 body {
   background: lightblue;
   font-family: "varela round", sans-serif;
@@ -114,53 +117,82 @@ nav {
   }
 }
 /* RULES POPUP*/
-.rules-popup {
+/* not my code ".modal"*/ 
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
   background-color: white;
-  width: 450px;
-  height: 900px;
-  padding: 30px 40px;
-  margin: auto;
-  width: 80%;
-  padding-top: 0px;
-  border: 3px solid green;
-  /*REMOVE THIS BELOW WHEN SCRPIT HAS BEEN ADDED*/
-  display: none;
+  width: 700px;
+  max-width: 80%;
 }
 
-@media only screen and (min-width: 840px) {
-  .big-screen-rules-box {
-    background: url(game.PNG) no-repeat center center;
-    height: 100%;
-    width: 100%;
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.small-screen-rules-box {
+  padding: 10px 15px;
+  
   }
-  .rules-content {
+@media only screen and (min-width: 840px){
+  .big-screen-rules-box{
+    height: 700px;
+    width: 700px;
+    background: url(game.PNG) no-repeat center center;
+  }
+  .small-screen-rules-box {
+  display: none;
+  }
+}
+@media only screen and (max-width: 839px){
+  .big-screen-rules-box{
     display: none;
   }
 }
+/* not my code "#overlay"*/ 
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
 
-@media only screen and (max-width: 839px) {
-  .rules-content {
-    text-align: center;
-  }
-
-  .rules-content h1 {
-    text-align: center;
-    vertical-align: top;
-  }
-
-  .small-screen-rules-box {
-    height: 800px;
-    width: 100%;
-    position: relative;
-    top: 0px;
-  }
-  .small-screen-rules-box h2 {
-    font-family: "varela round", sans-serif;
-  }
-  .small-screen-rules-box h3 {
-    font-family: "varela round", sans-serif;
-    padding-top: 20px;
-  }
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* MAIN GAME */
