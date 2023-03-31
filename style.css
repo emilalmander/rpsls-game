@@ -240,12 +240,26 @@ nav {
 }
 
 .x-won p {
-  width: 570px;
-  height: 50px;
+  width: 770px;
+  height: 60px;
   background-color: gray;
   display: inline-block;
   margin-top: 100px;
   
+}
+
+.green-border{
+  border: 3px solid green;
+  box-shadow: 0 0 11px green;
+}
+.red-border{
+  border: 3px solid red;
+  box-shadow: 0 0 11px red;
+}
+
+.yellow-border{
+  border: 3px solid yellow;
+  box-shadow: 0 0 11px yellow;
 }
 .score {
   width: 770px;

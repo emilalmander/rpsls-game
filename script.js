@@ -70,16 +70,23 @@ function win(userChoice, computerChoice){
   userScore++;
   userScore_span.innerHTML = userScore;
   opponentScore_span.innerHTML = opponentScore;
-  xwon_p.innerHTML = numberToWord(userChoice) + " beats " + numberToWord(computerChoice) + " you win!!";
-  
- 
+  xwon_p.innerHTML = numberToWord(userChoice) + " beats " + numberToWord(computerChoice) + " you win!! 🔥";
+  document.getElementById(userChoice).classList.add("green-border");
+  setTimeout(function(){document.getElementById(userChoice).classList.remove("green-border")}, 500)
 }
-function lost(){
+function lost(userChoice, computerChoice){
   opponentScore++;
   opponentScore_span.innerHTML = opponentScore;
+  userScore_span.innerHTML = userScore;
+  xwon_p.innerHTML = numberToWord(userChoice) + " loses to " + numberToWord(computerChoice) + " you lost 💀";
+  document.getElementById(userChoice).classList.add("red-border");
+  setTimeout(function(){document.getElementById(userChoice).classList.remove("red-border")}, 500)
+  
 }
-function draw(){
-  console.log("its a draw");
+function draw(userChoice, computerChoice){
+  xwon_p.innerHTML = numberToWord(userChoice) + " equalises " + numberToWord(computerChoice) + " its a draw🤝";
+  document.getElementById(userChoice).classList.add("yellow-border");
+  setTimeout(function(){document.getElementById(userChoice).classList.remove("yellow-border")}, 500)
 }
 
 
