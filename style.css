@@ -230,22 +230,29 @@ nav {
   height: 50px;
   background-color: gray;
   display: inline-block;
-  font-size: 30px;
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+}
+.new-game p:hover {
+  background-color: rgb(87, 85, 85);
+  cursor: pointer;
 }
 
 .x-won p {
-  width: 270px;
+  width: 570px;
   height: 50px;
   background-color: gray;
   display: inline-block;
   margin-top: 100px;
+  
 }
 .score {
   width: 770px;
   height: 150px;
   background-color: gray;
   display: inline-block;
-  margin-top: 370px;
+  margin-top: 70px;
   padding: 45px 20px;
   color: white;
   position: relative;

@@ -44,7 +44,7 @@ const opponentScore_span = document.getElementById("opponent-score");
 const userScore_span = document.getElementById("user-score");
 const newGame_div = document.getElementById("new-Game");
 const score_div = document.querySelector(".score");
-const xwon_div = document.querySelector(".x-won")
+const xwon_p = document.querySelector(".x-won p")
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
@@ -52,14 +52,27 @@ const lizzard_div = document.getElementById("l");
 const smock_div = document.getElementById("sp");
 
 
+function numberToWord(letter){
+  if (letter === "r") return "rock";
+  if (letter === "p") return "paper";
+  if (letter === "s") return "scissors";
+  if (letter === "l") return "lizzard";
+  if (letter === "sp") return "spock";
+
+}
+
 function getComputerChoice(){
   const choices = ["r", "p", "s", "l", "sp"];
   const randomNumber = Math.floor(Math.random() * 5);
   return choices[randomNumber];
 }
-function win(){
+function win(userChoice, computerChoice){
   userScore++;
   userScore_span.innerHTML = userScore;
+  opponentScore_span.innerHTML = opponentScore;
+  xwon_p.innerHTML = numberToWord(userChoice) + " beats " + numberToWord(computerChoice) + " you win!!";
+  
+ 
 }
 function lost(){
   opponentScore++;
@@ -68,6 +81,7 @@ function lost(){
 function draw(){
   console.log("its a draw");
 }
+
 
 
 function game(userChoice) {
@@ -83,7 +97,7 @@ function game(userChoice) {
       case "ps":
       case "sps":
       case "rsp":
-        win();
+        win(userChoice, computerChoice);
     break;
       case "rp":
       case "spr":
@@ -95,21 +109,21 @@ function game(userChoice) {
       case "lp":
       case "lsp":
       case "psp":
-        lost();
+        lost(userChoice, computerChoice);
         break;
       case "rr":
       case "spsp":
       case "ll":
       case "ss":
       case "pp":
-        draw()
+        draw(userChoice, computerChoice)
         break;
   }
   
 
 }
 
-game("c");
+
 
 
 
