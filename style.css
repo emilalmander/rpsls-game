@@ -210,13 +210,18 @@ nav {
 }
 
 .choice {
-  width: 170px;
+  width: 180px;
   height: 50px;
   background-color: gray;
   margin-right: 20px;
   display: inline-block;
   margin-top: 50px;
   transition: all 0.4s ease;
+  border-radius: 30px;
+  box-shadow: 0 0 11px black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
   
   
 }
@@ -233,6 +238,9 @@ nav {
   font-size: 35px;
   color: black;
   font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 0 11px black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .new-game p:hover {
   background-color: rgb(87, 85, 85);
@@ -240,12 +248,24 @@ nav {
 }
 
 .x-won p {
-  width: 770px;
+  width: 790px;
   height: 60px;
   background-color: gray;
   display: inline-block;
   margin-top: 100px;
-  
+  border-radius: 30px;
+  box-shadow: 0 0 11px black;
+  max-width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+@media screen and (max-width: 803px){
+  .x-won p {
+    width: 790px;
+    height: 125px;
+    
+  }
 }
 
 .green-border{
@@ -270,24 +290,52 @@ nav {
   padding: 45px 20px;
   color: white;
   position: relative;
+  border-radius: 30px;
+  box-shadow: 0 0 11px black;
 }
 
 .badge {
-    background-color: lightblue;
+    background-color: rgb(180, 74, 74);
     color: black;
-    font-size: 30px;
+    font-size: 35px;
     border: 3px solid gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    
+    border-radius: 30px;
+    box-shadow: 0 0 11px lightblue;
+
+    
 }
 
 #user-label {
   position: absolute;
   top: 55px;
-  left: -25px;
+  left: 145px;
 }
 #opponent-label {
   position: absolute;
   top: 55px;
-  right: -55px;
+  right: 55px;
+}
+@media screen and (max-width: 575px){
+  #user-label {
+    position: absolute;
+    top: 55px;
+    left: 75px;
+  }
+  #opponent-label {
+    position: absolute;
+    top: 55px;
+    right: 0px;
+  }
+}
+@media screen and (max-width: 469px){
+  .badge {
+    
+    font-size: 25px;
+    
+}
 }
 #user-score, #opponent-score{
   font-size: 50px;
