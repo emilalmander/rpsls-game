@@ -206,7 +206,7 @@ nav {
  text-align: center;
  padding-top: 100px;
  
- border: 1px solid black;
+ 
 }
 
 .choice {
@@ -230,7 +230,10 @@ nav {
   cursor: pointer;
 }
 
-.new-game p {
+.new-game {
+  padding-top: 20px;
+}
+.new-game a {
   width: 270px;
   height: 50px;
   background-color: gray;
@@ -241,8 +244,10 @@ nav {
   border-radius: 30px;
   box-shadow: 0 0 11px black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+
 }
-.new-game p:hover {
+.new-game a:hover {
   background-color: rgb(87, 85, 85);
   cursor: pointer;
 }

@@ -97,25 +97,25 @@ function game(userChoice) {
       case "rs":
       case "rl":
       case "lp":
-      case "ls":
+      case "lsp":
       case "sl":
       case "sp":
       case "pr":
-      case "ps":
+      case "psp":
       case "sps":
-      case "rsp":
+      case "spr":
         win(userChoice, computerChoice);
     break;
-      case "rp":
-      case "spr":
-      case "rl":
-      case "ls":
-      case "sps":
-      case "rs":
+      case "sr":
+      case "lr":
       case "ps":
-      case "lp":
-      case "lsp":
-      case "psp":
+      case "ls":
+      case "rp":
+      case "spp":
+      case "spl":
+      case "pl":
+      case "ssp":
+      case "rsp":
         lost(userChoice, computerChoice);
         break;
       case "rr":
