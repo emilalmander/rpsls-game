@@ -78,6 +78,7 @@ there are no known bugs at the moment.
 * html, no errors or warnings to show.
 * css, no errors or warnings to show.
 * accesibility, when lighthouse testing the page it got this score.
+
 ![lighthouse](https://user-images.githubusercontent.com/47448917/230879505-8c5bd3cb-f43d-484e-bf8f-a7b97c0459ce.PNG)
 
 # DEPLOYMENT
