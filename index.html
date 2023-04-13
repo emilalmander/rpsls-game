@@ -17,30 +17,29 @@
         <div class="logo">
           <a href="index.html">RPSLS-GAME</a>
         </div>
-        <input type="checkbox" id="menu-toggle" />
+        <input type="checkbox" id="menu-toggle" aria-label="Toggle Navigation Menu"/>
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <ul class="nav-links">
-          
-          <li ><a data-modal-target="#modal" href="#">rules</a></li>
+          <li><a data-modal-target="#modal" href="#" aria-label="Open Rules Modal">rules</a></li>
         </ul>
       </nav>
     </header>
-    <div class="modal" id="modal">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
       <div class="modal-header">
-        <div class="title">RULES</div>
-        <button data-close-button class="close-button">&times;</button>
+        <div class="title" id="modal-title">RULES</div>
+        <button data-close-button class="close-button" aria-label="Close Rules Modal">&times;</button>
       </div>
       <div class="big-screen-rules-box"></div>
       <div class="small-screen-rules-box">
-        
-            <h2>who beats who?</h2>
-            <h3>Rock > Scissors, Lizard</h3>
-            <h3>Scissors > Paper, Lizard</h3>
-            <h3>Paper > Rock, Spock</h3>
-            <h3>Lizard > Spock, Paper</h3>
-            <h3>Spock > Scissors, Rock</h3>
-          </div>
-      
+        <h2>who beats who?</h2>
+        <ul>
+          <li><h3>Rock > Scissors, Lizard</h3></li>
+          <li><h3>Scissors > Paper, Lizard</h3></li>
+          <li><h3>Paper > Rock, Spock</h3></li>
+          <li><h3>Lizard > Spock, Paper</h3></li>
+          <li><h3>Spock > Scissors, Rock</h3></li>
+        </ul>
+      </div>
     </div>
     <div id="overlay" class="overlay1"></div>
     <div class="main-game">
@@ -57,7 +56,7 @@
           <p>winner is...</p>
         </div>
         <div class="new-game">
-          <a href="index.html">new game</a>
+          <a href="index.html">reset</a>
           
         </div>
       </div>
