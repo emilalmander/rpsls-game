@@ -76,7 +76,7 @@ nav {
 
 
 /* RULES POPUP*/
-/* not my code ".modal"*/ 
+/* code influenced by a codepen online row 80-138"*/ 
 .modal {
   position: fixed;
   top: 50%;
@@ -136,8 +136,8 @@ nav {
     display: none;
   }
 }
-/* not my code "#overlay"*/ 
-#overlay {
+/* code influenced by a codepen online row 140-155"*/ 
+.overlay1 {
   position: fixed;
   opacity: 0;
   transition: 200ms ease-in-out;
@@ -149,7 +149,7 @@ nav {
   pointer-events: none;
 }
 
-#overlay.active {
+.overlay1.active {
   opacity: 1;
   pointer-events: all;
 }
@@ -271,37 +271,55 @@ nav {
 
     
 }
+.badge1 {
+  background-color: rgb(180, 74, 74);
+  color: black;
+  font-size: 35px;
+  border: 3px solid gray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  
+  border-radius: 30px;
+  box-shadow: 0 0 11px lightblue;
 
-#user-label {
+  
+}
+
+.badge1 {
   position: absolute;
   top: 55px;
   left: 145px;
 }
-#opponent-label {
+.badge {
   position: absolute;
   top: 55px;
   right: 55px;
 }
 @media screen and (max-width: 575px){
-  #user-label {
+  .badge1 {
     position: absolute;
     top: 55px;
     left: 75px;
   }
-  #opponent-label {
+  .badge {
     position: absolute;
     top: 55px;
     right: 0px;
   }
 }
 @media screen and (max-width: 469px){
-  .badge {
+  .badge1 {
     
     font-size: 25px;
     
 }
+.badge {
+    
+  font-size: 25px;
+  
 }
-#user-score, #opponent-score{
+}
+.span{
   font-size: 50px;
 }
 
